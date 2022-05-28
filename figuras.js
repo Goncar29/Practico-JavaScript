@@ -127,7 +127,7 @@ function calcularAreaTriangulo(){
 
 function alturaTriangulo(lado1, lado2, base){
     if (lado1 != lado2){
-        console.log("Los lados no son iguales, por lo tanto no es isosceles")
+        alert("Los lados no son iguales, por lo tanto no es isosceles")
     } else {
         const ladoChico2 = base / 2;
         const baseChico = lado1;
