@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>porcentaajes y descuentos | Curso Práctico de JavaScript de Platzi</title>
 </head>
+<style>
+    html{
+        background-color: darkslategrey;
+    }
+</style>
 <body>
     <header>
         <h1>
@@ -17,15 +22,21 @@
         <h2>Calcula el precio a pagar de tus productos con descuento</h2>
         <form action="" method="post">
             <label for="InputPrice">Escribe el precio de tu producto:</label>
-            <input id="InputPrice" type="number" value="">
+            <input id="InputPrice" type="number" placeholder="Inserte números..">
             
-            <label for="InputDiscount">Escribe el precio de tu producto:</label>
-            <input id="InputDiscount" type="number" value="">
+            <label for="InputDiscount">Escribe el descuento de tu producto:</label>
+            <input id="InputDiscount" type="number" placeholder="Inserte números..">
+
+            <label for="InputCoupon">Escribe el cupón de descuento para tu producto:</label>
+            <input id="InputCoupon" type="text" placeholder="Inserte el cupon"/>
             
             <button type="button" onclick="onClickButtonPriceDiscount()">
                 Calcular el precio con descuento
             </button>
+
             <p id="resultPrice"></p>
+            <p id="resultPriceCoupon"></p>
+
         </form>
     </section>
     <script src="./descuentos.js"></script>
