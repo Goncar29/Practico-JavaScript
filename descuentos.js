@@ -7,7 +7,7 @@ btn.addEventListener('click',calcularPrecioConDescuento);
 
 const couponsList=[];
 couponsList.push({
-    name:'Blackfriday',
+    name:'BlackFriday',
     discount:30,
 });
 couponsList.push({
@@ -22,13 +22,14 @@ couponsList.push({
 function calcularPrecioConDescuento(){
     const price=Number(inputPrice.value);
     const coupon=inputCoupon.value;
-    
+    // VALIDAMOS EN CASO DE QUE NO SE COMPLETE EL FORMULARIO
     if(!price||!coupon){
-        pResult.innerText='CHANCLA por favor llena el formulario';
+        pResult.innerText='Por favor llena el formulario';
         return;
     }
-let discount;
+let discount; //del array
 
+    // FUNCIÓN FILTRO DE CUPONES
 function isCouponInArray(couponElement){
     return couponElement.name==coupon;
 }
@@ -41,13 +42,17 @@ if(couponInArray){
     pResult.innerText='El cupón no es válido';
     return;
 }
-console.log({
-    coupon,
-    discount,
-    couponInArray,
-    couponsList,
-});
-
+    // SI CUMPLE CON LO ANTERIOR REALIZA EL CALCULO DEL DESCUENTO Y LO IMPRIME
 const newPrice = (price * (100 - discount )) / 100;
 pResult.innerText='El nuevo precio con descuento es $' + newPrice;
 }
+
+// console.log({
+//     coupon,
+//     discount,
+//     couponInArray,
+//     couponsList,
+// });
+
+// VALIDAR SI HAY !PRECIO Y !DESCUENTO O
+// VALIDAR SI HAY !PRECIO Y !CUPON
