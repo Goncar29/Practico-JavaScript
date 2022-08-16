@@ -1,22 +1,24 @@
-const lista1 =[
-    100,
-    200,
-    300,
-    500,
-];
-
-function calcularMediaAritmetica(lista){
+// [1,2,3,4]
+function calcularPromedio(lista) {
     // let sumaLista = 0;
     // for (let i = 0; i < lista.length; i++) {
-    // sumaLista = sumaLista + lista[i];
+    //   sumaLista = sumaLista + lista[i];
     // }
 
-    const sumaLista = lista.reduce(function(valorAcumulado = 0, nuevoElemento){
-        return valorAcumulado + nuevoElemento;
-    })
+    function sumarTodosElementos(valorAcumulado, nuevoValor) {
+        return valorAcumulado + nuevoValor;
+    }
+    
+    // const ejemplo = (a, b) => a + b;
+    
+    // const sumarTodosElementos =
+    //   (valorAcumulado, nuevoValor) => valorAcumulado + nuevoValor;
+    // const sumaLista = lista.reduce((a, b) => a + b);
 
-    const promedioLista = sumaLista / lista.length;
+    const sumaLista = lista.reduce(sumarTodosElementos);
 
-    return promedioLista;
+    const promedio = sumaLista / lista.length;
+    console.log(promedio);
+    return promedio;
 }
 
