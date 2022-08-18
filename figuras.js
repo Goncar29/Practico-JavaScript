@@ -82,7 +82,39 @@ console.group("Círculos")
     }
     //console.log("El área del círculo es: " + areaCirculo + "cm²")
         
-console.groupEnd()
+
+    // OTRA FORMA
+//     console.group('Circle')
+
+//     const radioCirculo = 3;
+//     const diametroCirculo = radioCirculo * 2;
+//     const PI = 3.1415;
+    
+//     const circunferencia = diametroCirculo * PI;
+//     const areaCirculo = (radioCirculo ** 2) * PI;
+    
+//     console.log({
+//         radioCirculo,
+//         diametroCirculo,
+//         PI,
+//         circunferencia,
+//         areaCirculo,
+//         });
+        
+//         function calcularCirculo(radio) {
+//             const diametro = radio * 2;
+//             const radioAlCuadrado = Math.pow(radio, 2);
+        
+//             return {
+//             circunferencia: diametro * Math.PI,
+//             area: radioAlCuadrado * Math.PI,
+//             };
+//         }
+        
+//         console.groupEnd('Circle')
+
+        
+// console.groupEnd()
 
 // Aquí interactuamos con el HTML
 // Calculo del Cuadrado
@@ -141,6 +173,27 @@ function alturaTriangulo(lado1, lado2, base){
         return alturaDelTriangulo;
     }
 }
+//              OTRA FORMA
+// function alturaTriangulo(lado1, base) {
+//     if (lado1 == base) {
+//     console.warn('Este no es un triángulo isosceles');
+//     } else {
+//       // h = raizcuadrada(lado1**2 - (b**2)/4)
+//       return Math.sqrt( (lado1 ** 2) - ( (base ** 2) ) / 4 );
+//     }
+// }
+
+function calcularAlturaTriangulo(lado1,lado2, base){
+    if(lado1!=lado2 && lado1 != base && lado2 != base){
+        const semiperimetro = (base + lado1 + lado2) / 2;
+
+        return (2/ base) * (Math.sqrt(semiperimetro * (semiperimetro - base) * (semiperimetro - lado1) * (semiperimetro - lado2)));
+        
+    }else {
+            return Math.sqrt((lado1 ** 2) - (base ** 2)/ 4);
+        }
+};
+
 function calcularAlturaTriangulo(){
     const input1 = document.getElementById("InputTrianguloAltura1")
     const value1 = input1.value
@@ -152,6 +205,20 @@ function calcularAlturaTriangulo(){
     const altura = alturaTriangulo(value1, value2, value3)
     alert(altura)
 }
+
+// Altura Triangulo Escaleno
+function calcularAlturaTrianguloEscaleno(lado1,lado2, base) {
+    if (lado1 == lado2 || lado2 == base || base == lado1){
+        console.warn(' no es un triangulo escaleno')
+    } else {
+        // semiPerimetro = (lado1 + lado2 + base) / 2
+        const semiPerimetro = (lado1 + lado2 + base) / 2;
+        //h = (2 / lado1) * raizcuadrada (semiPerimetro(semiPerimetro - lado1)*(semiPerimetro - lado2)*(semiPerimetro - base)) fórmula de Herón
+        const altura = (2 / lado1) * Math.sqrt(semiPerimetro * (semiPerimetro - lado1) * (semiPerimetro - lado2) * (semiPerimetro - base) / 2 );
+        return altura
+    }
+}
+
 
 // Calculo del Circulo
 function calcularPerimetroCirculo(){
