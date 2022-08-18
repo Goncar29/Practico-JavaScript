@@ -1,3 +1,4 @@
+/* Creating a list of numbers. */
 const lista1 = [
     1,
     2,
@@ -12,8 +13,10 @@ const lista1 = [
     1,
 ];
 
+/* Creating an empty object. */
 const lista1Count = {};
 
+/* Counting the number of times each element appears in the list. */
 lista1.map(
     function (elemento) {
         if (lista1Count[elemento]) {
@@ -24,6 +27,7 @@ lista1.map(
     }
 );
 
+/* Sorting the list of numbers by the number of times they appear in the list. */
 const lista1Array = Object.entries(lista1Count).sort(
     function (elementoA, elementoB) {
         return elementoA[1] - elementoB[1];
