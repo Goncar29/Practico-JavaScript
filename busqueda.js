@@ -50,6 +50,7 @@ function proyeccionPorPersona(nombrePersona) {
 }
 
 // Restructurando información de las empresas
+const empresas = {};
 for (persona of salarios) {
     for (trabajo of persona.trabajos) {
         if (!empresas[trabajo.empresa]) {

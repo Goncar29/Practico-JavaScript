@@ -94,6 +94,4 @@ PlatziMath.ordenarListaBidimensional = function ordenarListaBidimensional(listaD
     return lista;
 }
 
-calcularMediana([100, 385, 200, 15, 500, 85, 32, 400000000,])
-
 // https://platzi.com/clases/3435-javascript-practico-matematicas/51513-metodo-sort/
