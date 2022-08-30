@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/figuras.css">
     <title>Promedio</title>
 </head>
 <body>
-    <h1>Promedio</h1>
-    <form action="" method="post">
-        <label for="Input1">Escribe el precio de tu producto:</label>
-        <input id="Input1" type="number" placeholder="Inserte números..">
-        
-        <label for="Input2">Escribe el descuento de tu producto:</label>
-        <input id="Input2" type="number" placeholder="Inserte números..">
+    <header>
+        <h1>
+            Promedio
+        </h1>
+    </header>
+    <section>
+        <div>
+            <h2>
+                Calcular Promedio
+            </h2>
+        </div>
+    </section>
+    <article>
+        <form action="" method="post">
+            <label for="Input1">Escribe el precio de tu producto:</label>
+            <input id="Input1" type="number" placeholder="Inserte números..">
+            
+            <label for="Input2">Escribe el descuento de tu producto:</label>
+            <input id="Input2" type="number" placeholder="Inserte números..">
 
-        <label for="Input3">Escribe el cupón de descuento para tu producto:</label>
-        <input id="Input3" type="number" placeholder="Inserte números.."/>
+            <label for="Input3">Escribe el cupón de descuento para tu producto:</label>
+            <input id="Input3" type="number" placeholder="Inserte números.."/>
 
-        <button type="button" onclick="calcularMediaAritmetica()">
-            Calcular media aritmetica
-        </button>
+            <button type="button" onclick="calcularMediaAritmetica()">
+                Calcular media aritmetica
+            </button>
 
-        <p id="result"></p>
-
-    </form>
+            <p id="result"></p>
+        </form>
+    </article>
     <script src="./promedio.js"></script>
 </body>
 </html>
