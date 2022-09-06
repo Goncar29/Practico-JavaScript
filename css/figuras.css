@@ -74,4 +74,8 @@ article form button {
   background-color: #333;
   color: #fff;
   border-radius: 0.5rem;
+}
+article form p {
+  margin: 1rem 0rem;
+  font-size: 2rem;
 }/*# sourceMappingURL=figuras.css.map */
